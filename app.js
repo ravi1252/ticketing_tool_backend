@@ -1,3 +1,4 @@
+var tools = require('./data');
 const express = require('express')
 const app = express()
 const port = 4000
@@ -21,7 +22,7 @@ app.post('/login', (req, res) => {
 		return res.send({
 			"status" : "error",
 			"message" : "Invalid username or password"
-		});	
+		});
 	}
 	return res.send({
 		"status" : "success",
@@ -37,6 +38,29 @@ app.post('/registration', (req, res) => {
 	});
 });
 
+
+app.get('/tickets', (req, res) => {
+  res.send(tools.tickets)
+})
+
+
+app.delete('/tickets/:id', (req, res) => {
+  console.log("req.params.id : " + req.params.id);
+  if(!req.params.id) {
+    return res.send({
+			"status" : "error",
+			"message" : "Invalid id"
+		});
+  }
+  return res.send(  {
+        "id" : 2,
+        "name" : "Customer grievance",
+        "description" : "Network not available",
+        "createdDate" : "23 Sep 2021",
+        "status" : "resolved",
+        "assignedToEmail" : "technician#myrepublic.com"
+    });
+})
 
 
 app.listen(port, () => {

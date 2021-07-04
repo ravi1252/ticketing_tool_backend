@@ -48,7 +48,7 @@ app.get('/tickets', (req, res) => {
 
 app.post('/getUserDetails', (req, res) => {
   console.log("req.params.mobilenumber : " + req.params.mobilenumber);
-  console.log("req.params.emailid : " + req.params.emailid);
+  console.log("req.params.emailid : " + req.params.emailid);a
   return res.send({
       "id" : 1,
       "name" : "Ramanathan",

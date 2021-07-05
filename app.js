@@ -52,7 +52,7 @@ app.post('/getUserDetails', (req, res) => {
   return res.send({
       "id" : 1,
       "name" : "Ramanathan",
-      "fatherName" : "Network not available",
+      "fatherName" : "Raghu",
       "emailId" : "23 Sep 2021",
       "dob" : "resolved",
       "activationTime" : "technician#myrepublic.com",
@@ -68,12 +68,12 @@ app.get('/ticketoptions', (req, res) => {
   console.log("entered ticketoptions");
     return res.send(
       [
-        {"key" : "1", "value" : "Customer facing internet issue"},
-        {"key" : "2", "value" : "Pack issue"},
-        {"key" : "3", "value" : "Router issue"},
-        {"key" : "4", "value" : "Low internet"},
-        {"key" : "5", "value" : "Cost issue"},
-        {"key" : "6", "value" : "Others"}
+        {"key" : "1", "value" : "Customer facing data issue"},
+        {"key" : "2", "value" : "Customer facing signal issue"},
+        {"key" : "3", "value" : "Customer requesting caller tune"},
+        {"key" : "5", "value" : "Messages related issue"},
+        {"key" : "6", "value" : "Money related issues"},
+        {"key" : "7", "value" : "Others"}
       ]
     );
 })

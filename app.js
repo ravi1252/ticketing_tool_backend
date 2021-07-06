@@ -55,19 +55,24 @@ app.post('/getUserDetails', (req, res) => {
       "message" : "Invalid mobile number or invalid email Id"
     });
   }
-  return res.send({
-      "id" : 1,
-      "name" : "Ramanathan",
-      "fatherName" : "Raghu",
-      "emailId" : "23 Sep 2021",
-      "dob" : "resolved",
-      "activationTime" : "technician#myrepublic.com",
-      "address" : {
-        "city" : "kukatpally",
-        "area" : "hyderabad",
-        "houseNo" : "310/A"
+  return res.send(
+    {
+      "status" : "success",
+      "data" : {
+        "id" : 1,
+        "name" : "Ramanathan",
+        "fatherName" : "Raghu",
+        "emailId" : "23 Sep 2021",
+        "dob" : "resolved",
+        "activationTime" : "technician#myrepublic.com",
+        "address" : {
+          "city" : "kukatpally",
+          "area" : "hyderabad",
+          "houseNo" : "310/A"
+        }
       }
-  });
+    }
+    );
 })
 
 app.get('/ticketoptions', (req, res) => {

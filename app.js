@@ -48,20 +48,24 @@ app.get('/tickets', (req, res) => {
 
 app.post('/getUserDetails', (req, res) => {
   console.log("req.params.mobilenumber : " + req.params.mobilenumber);
-  console.log("req.params.emailid : " + req.params.emailid);a
-  return res.send({
-      "id" : 1,
-      "name" : "Ramanathan",
-      "fatherName" : "Raghu",
-      "emailId" : "23 Sep 2021",
-      "dob" : "resolved",
-      "activationTime" : "technician#myrepublic.com",
-      "address" : {
-        "city" : "kukatpally",
-        "area" : "hyderabad",
-        "houseNo" : "310/A"
-      }
-  });
+  console.log("req.params.emailid : " + req.params.emailid);
+  	return res.send({
+		"status" : "success",
+		"data" : {
+				  "id" : 1,
+				  "name" : "Ramanathan",
+				  "fatherName" : "Raghu",
+				  "emailId" : "23 Sep 2021",
+				  "dob" : "resolved",
+				  "activationTime" : "technician#myrepublic.com",
+				  "address" : {
+					"city" : "kukatpally",
+					"area" : "hyderabad",
+					"houseNo" : "310/A"
+					}
+				}
+	});
+ 
 })
 
 app.get('/ticketoptions', (req, res) => {
@@ -85,6 +89,7 @@ app.delete('/tickets/:id', (req, res) => {
 			"status" : "error",
 			"message" : "Invalid id"
 		});
+		
   }
   return res.send(  {
         "id" : 2,
